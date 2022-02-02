@@ -7,7 +7,7 @@ import 'package:awesome_notifications/src/utils/assert_utils.dart';
 /// All received details of a notification created or displayed on the system
 /// The data field
 class ReceivedNotification extends BaseNotificationContent {
-  ReceivedNotification() : super(channelKey: null, id: null);
+  ReceivedNotification() : super(channelKey: null, id: null, tag: null);
 
   ReceivedNotification fromMap(Map<String, dynamic> dataMap) {
     super.fromMap(dataMap);
