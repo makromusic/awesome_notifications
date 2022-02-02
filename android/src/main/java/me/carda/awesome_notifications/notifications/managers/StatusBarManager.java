@@ -75,7 +75,7 @@ public class StatusBarManager {
         }
         else {
             NotificationManagerCompat notificationManagerCompat = getAdaptedOldNotificationManager();
-            notificationManagerCompat.notify(String.valueOf(notificationModel.content.id), notificationModel.content.id, notification);
+            notificationManagerCompat.notify(notificationModel.content.tag, notificationModel.content.id, notification);
         }
     }
 
@@ -89,7 +89,7 @@ public class StatusBarManager {
         }
         else {
             NotificationManagerCompat notificationManagerCompat = getAdaptedOldNotificationManager();
-            notificationManagerCompat.notify(String.valueOf(notificationModel.content.id), notificationModel.content.id, notification);
+            notificationManagerCompat.notify(notificationModel.content.tag, notificationModel.content.id, notification);
         }
     }
 

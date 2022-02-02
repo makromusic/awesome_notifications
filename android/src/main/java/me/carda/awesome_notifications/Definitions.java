@@ -146,6 +146,7 @@ public interface Definitions {
     String NOTIFICATION_DISMISSED_DATE = "dismissedDate";
 
     String NOTIFICATION_ID = "id";
+    String NOTIFICATION_TAG = 'tag';
     String NOTIFICATION_RANDOM_ID = "randomId";
     String NOTIFICATION_LAYOUT = "notificationLayout";
     String NOTIFICATION_TITLE = "title";

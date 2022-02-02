@@ -131,7 +131,7 @@ const NOTIFICATION_ICON_RESOURCE_ID = 'iconResourceId';
 
 const NOTIFICATION_ID = 'id';
 const NOTIFICATION_LAYOUT = 'notificationLayout';
-
+const NOTIFICATION_TAG = 'tag';
 const NOTIFICATION_DISPLAY_ON_FOREGROUND = 'displayOnForeground';
 const NOTIFICATION_DISPLAY_ON_BACKGROUND = 'displayOnBackground';
 

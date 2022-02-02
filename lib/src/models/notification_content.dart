@@ -21,6 +21,7 @@ class NotificationContent extends BaseNotificationContent {
   NotificationContent(
       {required int id,
       required String channelKey,
+      required String tag,
       String? title,
       String? body,
       String? groupKey,
@@ -49,6 +50,7 @@ class NotificationContent extends BaseNotificationContent {
       this.displayOnBackground})
       : super(
             id: id,
+            tag: tag,
             channelKey: channelKey,
             groupKey: groupKey,
             title: title,

@@ -11,6 +11,7 @@ import '../definitions.dart';
 
 class BaseNotificationContent extends Model {
   int? id;
+  String? tag;
   String? channelKey;
   String? groupKey;
   String? title;
@@ -52,6 +53,7 @@ class BaseNotificationContent extends Model {
 
   BaseNotificationContent(
       {required this.id,
+      required this.tag,
       required this.channelKey,
       this.groupKey,
       this.title,
@@ -80,6 +82,7 @@ class BaseNotificationContent extends Model {
   @override
   BaseNotificationContent? fromMap(Map<String, dynamic> mapData) {
     this.id = AwesomeAssertUtils.extractValue(NOTIFICATION_ID, mapData, int);
+    this.tag = AwesomeAssertUtils.extractValue(NOTIFICATION_TAG, mapData, int);
     this.channelKey = AwesomeAssertUtils.extractValue(
         NOTIFICATION_CHANNEL_KEY, mapData, String);
     this.groupKey = AwesomeAssertUtils.extractValue(
@@ -135,6 +138,7 @@ class BaseNotificationContent extends Model {
   Map<String, dynamic> toMap() {
     return {
       NOTIFICATION_ID: id,
+      NOTIFICATION_TAG: tag,
       NOTIFICATION_CHANNEL_KEY: channelKey,
       NOTIFICATION_GROUP_KEY: groupKey,
       NOTIFICATION_TITLE: title,

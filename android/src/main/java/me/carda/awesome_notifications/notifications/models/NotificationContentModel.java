@@ -55,6 +55,7 @@ public class NotificationContentModel extends AbstractModel {
     public Long backgroundColor;
     public Integer progress;
     public String ticker;
+    public String tag;
 
     public NotificationPrivacy privacy;
     public String privateMessage;
@@ -83,6 +84,7 @@ public class NotificationContentModel extends AbstractModel {
         if(id < 0) {
             id = IntegerUtils.generateNextRandomId();
         }
+        tag = MapUtils.extractValue(arguments, Definitions.NOTIFICATION_TAG, String.class).or("");
 
         createdDate = MapUtils.extractValue(arguments, Definitions.NOTIFICATION_CREATED_DATE, String.class)
                             .or(DateUtils.getUTCDate());
@@ -160,6 +162,7 @@ public class NotificationContentModel extends AbstractModel {
         Map<String, Object> returnedObject = new HashMap<>();
 
         returnedObject.put(Definitions.NOTIFICATION_ID, this.id);
+        returnedObject.put(Definitions.NOTIFICATION_TAG, this.tag);
         returnedObject.put(Definitions.NOTIFICATION_RANDOM_ID, this.isRandomId);
         returnedObject.put(Definitions.NOTIFICATION_TITLE, this.title);
         returnedObject.put(Definitions.NOTIFICATION_BODY, this.body);
